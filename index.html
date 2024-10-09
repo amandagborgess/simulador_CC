@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Cartão de Crédito</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simulador de Cartão de Crédito</h1>
+
+      <form id="cardForm">
+        <label for="cardNumber">Número do Cartão</label>
+        <input
+          type="text"
+          id="cardNumber"
+          maxlength="16"
+          placeholder="1234 5678 9012 3456"
+          required
+        />
+
+        <label for="cardHolder">Nome do Titular</label>
+        <input
+          type="text"
+          id="cardHolder"
+          placeholder="Nome do Titular"
+          required
+        />
+
+        <label for="expiryDate">Data de Validade</label>
+        <input
+          type="text"
+          id="expiryDate"
+          maxlength="5"
+          placeholder="MM/AA"
+          required
+        />
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" maxlength="3" placeholder="123" required />
+
+        <button type="submit">Gerar Cartão</button>
+      </form>
+
+      <div class="card" id="creditCard">
+        <div class="card-number" id="displayCardNumber">
+          **** **** **** ****
+        </div>
+        <div class="card-holder" id="displayCardHolder">NOME DO TITULAR</div>
+        <div class="expiry-cvv">
+          <div class="expiry" id="displayExpiryDate">MM/AA</div>
+          <div class="cvv" id="displayCVV">***</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
